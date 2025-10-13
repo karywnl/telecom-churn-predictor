@@ -80,8 +80,6 @@ Input Layer: 26 features
 ### Final Results
 - **Validation Accuracy**: 78.89%
 - **ROC-AUC Score**: 0.8286
-- **Precision-Recall AUC**: 0.5986
-- **F1 Score**: 0.6207
 
 ### Confusion Matrix
 ```
@@ -93,7 +91,7 @@ Churn        131     243
 
 ### Class-wise Performance
 - **Class 0 (No Churn)**: Precision 0.87, Recall 0.84, F1-Score 0.85
-- **Class 1 (Churn)**: Precision 0.59, Recall 0.65, F1-Score 0.62
+- **Class 1 (Churn)**: Precision 0.69, Recall 0.84, F1-Score 0.79
 
 ## 🚀 Technology Stack
 
@@ -198,4 +196,5 @@ This solution enables telecom companies to:
 - **Size**: 7,032 customers after cleaning
 - **Features**: 19 original features expanded to 26 engineered features
 - **Target Distribution**: Imbalanced dataset with minority churn class
+
 
