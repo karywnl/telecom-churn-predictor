@@ -67,9 +67,23 @@ Input Layer: 26 features
 ├── Dense(8) + BatchNorm + SELU + Dropout(0.2)
 └── Dense(1) + Sigmoid
 ```
+### Understanding Activation Functions
 
-### Training Configuration
-- **Loss Function**: Focal Loss (α=1.0, γ=2.0) for handling class imbalance
+- **ReLU (Rectified Linear Unit)**  
+  ReLU is used in the initial layers because it helps solve the **vanishing gradient problem**, which occurs when gradients become too small during backpropagation, slowing down or stopping learning.  
+  ReLU outputs zero for negative inputs and the same value for positive inputs, maintaining stronger gradient flow through layers and speeding up convergence.
+
+- **SELU (Scaled Exponential Linear Unit)**  
+  SELU is used in the deeper layers to address the **dying ReLU problem**, where neurons permanently output zero and stop learning.  
+  SELU automatically normalizes activations due to its self-normalizing property — keeping neuron outputs close to zero mean and unit variance — thus ensuring stable and faster learning without requiring batch normalization.
+
+---
+
+## ⚙️ Training Configuration
+
+- **Loss Function**: Focal Loss (α=1.0, γ=2.0) for handling class imbalance  
+  Focal Loss modifies Binary Cross-Entropy by reducing the weight of well-classified examples and focusing more on misclassified or hard-to-learn samples.  
+  This makes it ideal for **imbalanced datasets** like churn prediction, where the number of non-churn customers significantly outweighs churn cases. It helps the model learn minority class patterns more effectively.
 - **Optimizer**: AdamW with weight decay (1e-4)
 - **Learning Rate**: Warm-up + Cosine Annealing scheduler
 - **Training Strategy**: Weighted sampling for balanced training
@@ -196,5 +210,6 @@ This solution enables telecom companies to:
 - **Size**: 7,032 customers after cleaning
 - **Features**: 19 original features expanded to 26 engineered features
 - **Target Distribution**: Imbalanced dataset with minority churn class
+
 
 
