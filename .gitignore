@@ -1,0 +1,23 @@
+# Environments
+.venv/
+venv/
+env/
+__pycache__/
+
+# Datasets and Large Files
+data/
+*.csv
+
+# Model Artifacts
+models/
+*.pkl
+weights/
+
+# Jupyter Notebook artifacts
+.ipynb_checkpoints/
+*.txt
+!requirements.txt
+
+# OS generated files
+.DS_Store
+Thumbs.db
