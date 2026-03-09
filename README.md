@@ -1,4 +1,5 @@
 ﻿# Telecom Churn Predictor
+*Last Refined: 2026-03-10*
 
 An end-to-end Machine Learning web application designed to predict the likelihood of customers churning based on demographics, services used, and billing information.
 
