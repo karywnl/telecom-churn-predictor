@@ -1,5 +1,4 @@
 ﻿# Telecom Churn Predictor
-*Last Refined: 2026-03-10*
 
 An end-to-end Machine Learning web application designed to predict the likelihood of customers churning based on demographics, services used, and billing information.
 
@@ -56,3 +55,4 @@ The application incorporates a LightGBM classifier specifically tuned to priorit
 - **AUC-PR (Achieved: 0.6409)**: 
   - *What it is:* The Area Under the Precision-Recall Curve. 
   - *Why it's better:* For heavily imbalanced datasets, AUC-PR is the ultimate test of model quality. A score of 0.64 strictly outperforms baseline methods, confirming that the model's high recall does not come at the devastating expense of precision.
+
