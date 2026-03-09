@@ -5,12 +5,13 @@ env/
 __pycache__/
 
 # Datasets and Large Files
-data/
-*.csv
+# data/   <-- Removed to allow deployment data
+# *.csv   <-- Removed to allow deployment data
+customer_churn.csv
 
 # Model Artifacts
-models/
-*.pkl
+# models/ <-- Removed to allow deployment model
+# *.pkl   <-- Removed to allow deployment model
 weights/
 
 # Jupyter Notebook artifacts
