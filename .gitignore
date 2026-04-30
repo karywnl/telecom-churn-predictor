@@ -17,7 +17,6 @@ weights/
 # Jupyter Notebook artifacts
 .ipynb_checkpoints/
 *.txt
-!requirements.txt
 
 # OS generated files
 .DS_Store

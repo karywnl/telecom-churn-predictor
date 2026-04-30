@@ -1,6 +1,4 @@
 @echo off
-echo Activating Virtual Environment...
-call .\venv\Scripts\activate.bat
 echo Starting Streamlit App...
-streamlit run app.py
+uv run streamlit run app.py
 pause
